@@ -16,9 +16,9 @@ What are the performance differences of our optimization scheme in different har
 Research is still in progress~
 ## Performance measurement
 ### Emulation result
-![image](https://github.com/KevinLikesDringCoffe/Stencil-computation-on-FPGA/blob/main/fig/100iter.PNG)  
-![image](https://github.com/KevinLikesDringCoffe/Stencil-computation-on-FPGA/blob/main/fig/1000iter.PNG)  
-![image](https://github.com/KevinLikesDringCoffe/Stencil-computation-on-FPGA/blob/main/fig/10000iter.PNG)  
+![image](https://github.com/KevinLikesDringCoffe/Stencil-computation-on-FPGA/blob/main/fig/100iter.png)  
+![image](https://github.com/KevinLikesDringCoffe/Stencil-computation-on-FPGA/blob/main/fig/1000iter.png)  
+![image](https://github.com/KevinLikesDringCoffe/Stencil-computation-on-FPGA/blob/main/fig/10000iter.png)  
 ### Performance comparison
 |  |7z010 hw|7z010 sw|host PC(HUAWEI matebook 13)|
 |:--:|:--:|:--:|:--:|
