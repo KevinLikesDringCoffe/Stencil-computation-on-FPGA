@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="wrapper.cpp" path="C:\Users\zhenyu\Desktop\HLSstudy\FDTD\wrapper.cpp"/>
+    <originFiles name="stencil.cpp" path="C:\Users\zhenyu\Desktop\HLSstudy\FDTD\stencil.cpp"/>
+    <originFiles name="kernel64x64.cpp" path="C:\Users\zhenyu\Desktop\HLSstudy\FDTD\kernel64x64.cpp"/>
+    <originFiles name="fdtd.h" path="C:\Users\zhenyu\Desktop\HLSstudy\FDTD\fdtd.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.cpp" path="C:\Users\zhenyu\Desktop\HLSstudy\FDTD\tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

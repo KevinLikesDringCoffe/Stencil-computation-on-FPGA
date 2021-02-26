@@ -1,0 +1,759 @@
+INFO-FLOW: Workspace C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1 opened at Fri Feb 26 20:29:04 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.142 sec.
+Execute     source D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.239 sec.
+Command     ap_source done; 0.246 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z010-clg400-1 
+Execute       ap_part_info -name xc7z010-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.885 sec.
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z010:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z010-clg400-1 
+Execute         ap_part_info -name xc7z010-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 4400} {LUT 17600} {FF 35200} {DSP48E 80} {BRAM 120} {URAM 0} 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.102 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.122 sec.
+Execute     ap_part_info -data single -name xc7z010-clg400-1 
+Execute     ap_part_info -name xc7z010-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z010-clg400-1 -data info 
+Execute     ap_part_info -name xc7z010-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 4400} {LUT 17600} {FF 35200} {DSP48E 80} {BRAM 120} {URAM 0} 
+Execute     ap_part_info -name xc7z010-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 1.693 sec.
+Execute   set_part xc7z010-clg400-1 
+Execute     ap_part_info -name xc7z010-clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z010-clg400-1 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z010:-clg400:-1 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z010-clg400-1 
+Execute       ap_part_info -name xc7z010-clg400-1 -data resources 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 4400} {LUT 17600} {FF 35200} {DSP48E 80} {BRAM 120} {URAM 0} 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z010-clg400-1 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.226 sec.
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   config_export -format ip_catalog -rtl verilog 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'FDTD/kernel64x64.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling FDTD/kernel64x64.cpp as C++
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       is_encrypted FDTD/kernel64x64.cpp 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "FDTD/kernel64x64.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp" 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E FDTD/kernel64x64.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp
+Command       clang done; 1.263 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.219 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp"  -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.02 sec.
+INFO-FLOW: Done: GCC PP time: 2.5 seconds per iteration
+Execute       source D:/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source D:/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp std=gnu++98 -directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp std=gnu++98 -directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.kernel64x64.pp.0.cpp.diag.yml C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.kernel64x64.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.kernel64x64.pp.0.cpp.err.log 
+Command       ap_eval done; 0.183 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.kernel64x64.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.kernel64x64.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.kernel64x64.pp.0.cpp.err.log 
+Execute         source D:/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source D:/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-legacy-rewriter.kernel64x64.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-legacy-rewriter.kernel64x64.pp.0.cpp.err.log 
+Command         ap_eval done; 0.177 sec.
+Command       tidy_31 done; 0.337 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.bc" 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.bc
+Command       clang done; 1.001 sec.
+INFO: [HLS 200-10] Analyzing design file 'FDTD/stencil.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling FDTD/stencil.cpp as C++
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       is_encrypted FDTD/stencil.cpp 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "FDTD/stencil.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp" 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E FDTD/stencil.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp
+Command       clang done; 0.974 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp"  -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.979 sec.
+INFO-FLOW: Done: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp std=gnu++98 -directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp std=gnu++98 -directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.stencil.pp.0.cpp.diag.yml C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.stencil.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.stencil.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.stencil.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.stencil.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.stencil.pp.0.cpp.err.log 
+Execute         ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-legacy-rewriter.stencil.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-legacy-rewriter.stencil.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.146 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.bc" 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.bc
+Command       clang done; 0.985 sec.
+INFO: [HLS 200-10] Analyzing design file 'FDTD/wrapper.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling FDTD/wrapper.cpp as C++
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       is_encrypted FDTD/wrapper.cpp 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "FDTD/wrapper.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp" 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E FDTD/wrapper.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp
+Command       clang done; 0.976 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp"  -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.984 sec.
+INFO-FLOW: Done: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp std=gnu++98 -directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp std=gnu++98 -directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.wrapper.pp.0.cpp.diag.yml C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.wrapper.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-dataflow-lawyer.wrapper.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.wrapper.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.wrapper.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/tidy-3.1.wrapper.pp.0.cpp.err.log 
+Execute         ap_eval exec -ignorestderr D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-legacy-rewriter.wrapper.pp.0.cpp.out.log 2> C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/xilinx-legacy-rewriter.wrapper.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.224 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.111 sec.
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Vivado/2019.2/common/technology/autopilot" -I "D:/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.bc" 
+INFO-FLOW: exec D:/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/2019.2/common/technology/autopilot -I D:/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.bc
+Command       clang done; 0.99 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel64x64.g.bc C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/stencil.g.bc C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.g.bc -hls-opt -except-internalize wrapper -LD:/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.284 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 194.723 ; gain = 102.406
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 194.723 ; gain = 102.406
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.pp.bc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Vivado/2019.2/win64/lib -lfloatconversion -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.512 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top wrapper -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.0.bc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:99).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:91).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:84).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:77).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:70).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:63).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:56).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:50).
+INFO: [XFORM 203-603] Inlining function 'jacobi_stencil' into 'Kernel64x64' (FDTD/kernel64x64.cpp:43).
+Command         transform done; 0.37 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 194.723 ; gain = 102.406
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.1.bc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.433 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 194.723 ; gain = 102.406
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.g.1.bc to C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.o.1.bc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (FDTD/kernel64x64.cpp:32) in function 'Kernel64x64' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (FDTD/kernel64x64.cpp:35) in function 'Kernel64x64' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (FDTD/kernel64x64.cpp:37) in function 'Kernel64x64' completely with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2' (FDTD/kernel64x64.cpp:109) in function 'Kernel64x64' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2.1' (FDTD/kernel64x64.cpp:112) in function 'Kernel64x64' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'bondary_e_buffer' (FDTD/wrapper.cpp:30) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'bondary_w_buffer' (FDTD/wrapper.cpp:29) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'bondary_n_buffer' (FDTD/wrapper.cpp:27) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'bondary_s_buffer' (FDTD/wrapper.cpp:28) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'array_buffer' (FDTD/wrapper.cpp:26) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'array_buffer_tmp' (FDTD/kernel64x64.cpp:22) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'array_buffer' (FDTD/wrapper.cpp:26) in dimension 2 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'array_buffer_tmp' (FDTD/kernel64x64.cpp:22) in dimension 2 with a cyclic factor 2.
+Command         transform done; 0.84 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (FDTD/wrapper.cpp:81:4) to (FDTD/wrapper.cpp:80:22) in function 'wrapper'... converting 8 basic blocks.
+Command         transform done; 0.192 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 194.723 ; gain = 102.406
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.o.2.bc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (FDTD/wrapper.cpp:33:13) in function 'wrapper'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-6' (FDTD/wrapper.cpp:78:13) in function 'wrapper'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (FDTD/kernel64x64.cpp:30:18) in function 'Kernel64x64'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (FDTD/kernel64x64.cpp:27:14) in function 'Kernel64x64' : 
+
+more than one sub loop.
+WARNING: [HLS 200-466] Port 'bondary_n'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [HLS 200-466] Port 'bondary_s'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [HLS 200-466] Port 'bondary_w'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [HLS 200-466] Port 'bondary_e'() has different latency/depth on the same m_axi bundle:'gmem'
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'gmem' (FDTD/wrapper.cpp:45:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'gmem' (FDTD/wrapper.cpp:51:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'gmem' (FDTD/wrapper.cpp:57:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'gmem' (FDTD/wrapper.cpp:63:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'bondary_e_buffer[0]' (FDTD/wrapper.cpp:63:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'bondary_w_buffer[0]' (FDTD/wrapper.cpp:57:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'bondary_n_buffer[0]' (FDTD/wrapper.cpp:45:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'bondary_s_buffer[0]' (FDTD/wrapper.cpp:51:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer[0][0]' (FDTD/wrapper.cpp:38:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[0][' (FDTD/kernel64x64.cpp:43:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[0][' (FDTD/kernel64x64.cpp:70:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[0][' (FDTD/kernel64x64.cpp:84:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[0][' (FDTD/kernel64x64.cpp:99:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[0][.1' (FDTD/kernel64x64.cpp:56:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[0][.1' (FDTD/kernel64x64.cpp:77:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[1][' (FDTD/kernel64x64.cpp:50:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[1][' (FDTD/kernel64x64.cpp:91:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer_tmp[1][.1' (FDTD/kernel64x64.cpp:63:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'array_buffer[0][0]' (FDTD/kernel64x64.cpp:115:2)
+Command         transform done; 1.883 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 194.723 ; gain = 102.406
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 4.388 sec.
+Command     elaborate done; 17.485 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'wrapper' ...
+Execute       ap_set_top_model wrapper 
+Execute       get_model_list wrapper -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model wrapper 
+Execute       preproc_iomode -model Kernel64x64 
+Execute       get_model_list wrapper -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Kernel64x64 wrapper
+INFO-FLOW: Configuring Module : Kernel64x64 ...
+Execute       set_default_model Kernel64x64 
+Execute       apply_spec_resource_limit Kernel64x64 
+INFO-FLOW: Configuring Module : wrapper ...
+Execute       set_default_model wrapper 
+Execute       apply_spec_resource_limit wrapper 
+INFO-FLOW: Model list for preprocess: Kernel64x64 wrapper
+INFO-FLOW: Preprocessing Module: Kernel64x64 ...
+Execute       set_default_model Kernel64x64 
+Execute       cdfg_preprocess -model Kernel64x64 
+Execute       rtl_gen_preprocess Kernel64x64 
+INFO-FLOW: Preprocessing Module: wrapper ...
+Execute       set_default_model wrapper 
+Execute       cdfg_preprocess -model wrapper 
+Execute       rtl_gen_preprocess wrapper 
+INFO-FLOW: Model list for synthesis: Kernel64x64 wrapper
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Kernel64x64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Kernel64x64 
+Execute       schedule -model Kernel64x64 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_buffer_1_0_l', FDTD/kernel64x64.cpp:50) on array 'array_buffer_1_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_buffer_1_0'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_buffer_0_0_l_6', FDTD/kernel64x64.cpp:84) on array 'array_buffer_0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_buffer_0_0'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_buffer_0_1_l_10', FDTD/kernel64x64.cpp:84) on array 'array_buffer_0_1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_buffer_0_1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 25.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.188 sec.
+INFO: [HLS 200-111]  Elapsed time: 21.035 seconds; current allocated memory: 129.573 MB.
+Execute       syn_report -verbosereport -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.verbose.sched.rpt 
+Command       syn_report done; 0.457 sec.
+Execute       db_write -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.sched.adb -f 
+Command       db_write done; 0.143 sec.
+INFO-FLOW: Finish scheduling Kernel64x64.
+Execute       set_default_model Kernel64x64 
+Execute       bind -model Kernel64x64 
+BIND OPTION: model=Kernel64x64
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.146 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.784 seconds; current allocated memory: 132.683 MB.
+Execute       syn_report -verbosereport -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.verbose.bind.rpt 
+Command       syn_report done; 0.58 sec.
+Execute       db_write -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.bind.adb -f 
+Command       db_write done; 0.166 sec.
+INFO-FLOW: Finish binding Kernel64x64.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'wrapper' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model wrapper 
+Execute       schedule -model wrapper 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 10.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.219 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.023 seconds; current allocated memory: 133.715 MB.
+Execute       syn_report -verbosereport -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.verbose.sched.rpt 
+Execute       db_write -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.sched.adb -f 
+INFO-FLOW: Finish scheduling wrapper.
+Execute       set_default_model wrapper 
+Execute       bind -model wrapper 
+BIND OPTION: model=wrapper
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.145 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 134.668 MB.
+Execute       syn_report -verbosereport -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.verbose.bind.rpt 
+Command       syn_report done; 0.234 sec.
+Execute       db_write -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.bind.adb -f 
+INFO-FLOW: Finish binding wrapper.
+Execute       get_model_list wrapper -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Kernel64x64 
+Execute       rtl_gen_preprocess wrapper 
+INFO-FLOW: Model list for RTL generation: Kernel64x64 wrapper
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Kernel64x64' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Kernel64x64 -vendor xilinx -mg_file C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'Kernel64x64_array_buffer_tmp_0_s' to 'Kernel64x64_arraybkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Kernel64x64_array_buffer_tmp_0_1' to 'Kernel64x64_arraycud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Kernel64x64_array_buffer_tmp_1_s' to 'Kernel64x64_arraydEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Kernel64x64_array_buffer_tmp_1_1' to 'Kernel64x64_arrayeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_fadd_32ns_32ns_32_5_full_dsp_1' to 'wrapper_fadd_32nsfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_fmul_32ns_32ns_32_4_max_dsp_1' to 'wrapper_fmul_32nsg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'wrapper_fadd_32nsfYi': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'wrapper_fmul_32nsg8j': 10 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Kernel64x64'.
+Command       create_rtl_model done; 0.317 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.687 seconds; current allocated memory: 138.875 MB.
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Kernel64x64 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/systemc/Kernel64x64 -synmodules Kernel64x64 wrapper 
+Execute       gen_rtl Kernel64x64 -style xilinx -f -lang vhdl -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/vhdl/Kernel64x64 
+Execute       gen_rtl Kernel64x64 -style xilinx -f -lang vlog -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/verilog/Kernel64x64 
+Execute       syn_report -csynth -model Kernel64x64 -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/report/Kernel64x64_csynth.rpt 
+Command       syn_report done; 0.137 sec.
+Execute       syn_report -rtlxml -model Kernel64x64 -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/report/Kernel64x64_csynth.xml 
+Execute       syn_report -verbosereport -model Kernel64x64 -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.verbose.rpt 
+Command       syn_report done; 0.635 sec.
+Execute       db_write -model Kernel64x64 -f -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.adb 
+Command       db_write done; 0.302 sec.
+Execute       gen_tb_info Kernel64x64 -p C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'wrapper' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model wrapper -vendor xilinx -mg_file C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/initial_array' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/bondary_n' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/bondary_s' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/bondary_w' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/bondary_e' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/coef_tij' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/coef_ti' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/coef_tj' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'wrapper/iter' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'wrapper' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'initial_array', 'bondary_s', 'bondary_w', 'bondary_e', 'coef_tij', 'coef_ti', 'coef_tj' and 'iter' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'wrapper_array_buffer_0_0' to 'wrapper_array_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_array_buffer_0_1' to 'wrapper_array_bufibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_array_buffer_1_0' to 'wrapper_array_bufjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_array_buffer_1_1' to 'wrapper_array_bufkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_n_buffer_0' to 'wrapper_bondary_nlbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_n_buffer_1' to 'wrapper_bondary_nmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_s_buffer_0' to 'wrapper_bondary_sncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_s_buffer_1' to 'wrapper_bondary_socq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_w_buffer_0' to 'wrapper_bondary_wpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_w_buffer_1' to 'wrapper_bondary_wqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_e_buffer_0' to 'wrapper_bondary_ercU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'wrapper_bondary_e_buffer_1' to 'wrapper_bondary_esc4' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'wrapper'.
+Command       create_rtl_model done; 0.333 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.307 seconds; current allocated memory: 142.341 MB.
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.rtl_wrap.cfg.tcl 
+Execute       gen_rtl wrapper -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/systemc/wrapper -synmodules Kernel64x64 wrapper 
+Execute       gen_rtl wrapper -istop -style xilinx -f -lang vhdl -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/vhdl/wrapper 
+Execute       gen_rtl wrapper -istop -style xilinx -f -lang vlog -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/verilog/wrapper 
+Execute       syn_report -csynth -model wrapper -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/report/wrapper_csynth.rpt 
+Execute       syn_report -rtlxml -model wrapper -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/syn/report/wrapper_csynth.xml 
+Execute       syn_report -verbosereport -model wrapper -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.verbose.rpt 
+Command       syn_report done; 0.262 sec.
+Execute       db_write -model wrapper -f -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.adb 
+Command       db_write done; 0.149 sec.
+Execute       gen_tb_info wrapper -p C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper 
+Execute       export_constraint_db -f -tool general -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.constraint.tcl 
+Execute       syn_report -designview -model wrapper -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.design.xml 
+Command       syn_report done; 0.205 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model wrapper -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model wrapper -o C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks wrapper 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain wrapper 
+INFO-FLOW: Model list for RTL component generation: Kernel64x64 wrapper
+INFO-FLOW: Handling components in module [Kernel64x64] ... 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.compgen.tcl 
+INFO-FLOW: Found component wrapper_fadd_32nsfYi.
+INFO-FLOW: Append model wrapper_fadd_32nsfYi
+INFO-FLOW: Found component wrapper_fmul_32nsg8j.
+INFO-FLOW: Append model wrapper_fmul_32nsg8j
+INFO-FLOW: Found component Kernel64x64_arraybkb.
+INFO-FLOW: Append model Kernel64x64_arraybkb
+INFO-FLOW: Handling components in module [wrapper] ... 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.tcl 
+INFO-FLOW: Found component wrapper_array_bufhbi.
+INFO-FLOW: Append model wrapper_array_bufhbi
+INFO-FLOW: Found component wrapper_array_bufjbC.
+INFO-FLOW: Append model wrapper_array_bufjbC
+INFO-FLOW: Found component wrapper_bondary_nlbW.
+INFO-FLOW: Append model wrapper_bondary_nlbW
+INFO-FLOW: Found component wrapper_bondary_wpcA.
+INFO-FLOW: Append model wrapper_bondary_wpcA
+INFO-FLOW: Found component wrapper_AXILiteS_s_axi.
+INFO-FLOW: Append model wrapper_AXILiteS_s_axi
+INFO-FLOW: Found component wrapper_gmem_m_axi.
+INFO-FLOW: Append model wrapper_gmem_m_axi
+INFO-FLOW: Append model Kernel64x64
+INFO-FLOW: Append model wrapper
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: wrapper_fadd_32nsfYi wrapper_fmul_32nsg8j Kernel64x64_arraybkb wrapper_array_bufhbi wrapper_array_bufjbC wrapper_bondary_nlbW wrapper_bondary_wpcA wrapper_AXILiteS_s_axi wrapper_gmem_m_axi Kernel64x64 wrapper
+INFO-FLOW: To file: write model wrapper_fadd_32nsfYi
+INFO-FLOW: To file: write model wrapper_fmul_32nsg8j
+INFO-FLOW: To file: write model Kernel64x64_arraybkb
+INFO-FLOW: To file: write model wrapper_array_bufhbi
+INFO-FLOW: To file: write model wrapper_array_bufjbC
+INFO-FLOW: To file: write model wrapper_bondary_nlbW
+INFO-FLOW: To file: write model wrapper_bondary_wpcA
+INFO-FLOW: To file: write model wrapper_AXILiteS_s_axi
+INFO-FLOW: To file: write model wrapper_gmem_m_axi
+INFO-FLOW: To file: write model Kernel64x64
+INFO-FLOW: To file: write model wrapper
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model wrapper -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 114.29 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.127 sec.
+Command       ap_source done; 0.127 sec.
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'Kernel64x64_arraybkb_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.311 sec.
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'wrapper_array_bufhbi_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'wrapper_array_bufjbC_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'wrapper_bondary_nlbW_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'wrapper_bondary_wpcA_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         source ./AXILiteS.slave.tcl 
+Execute         is_m_axi_addr64 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.466 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.121 sec.
+Command       ap_source done; 0.121 sec.
+Execute       source D:/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=wrapper xml_exists=0
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.tbgen.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.107 sec.
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.compgen.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.171 sec.
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.compgen.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.constraint.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=0
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=10
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=11 #gSsdmPorts=0
+Execute       source D:/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.tbgen.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.dataonly.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.dataonly.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.tbgen.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.compgen.dataonly.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.constraint.tcl 
+Execute       sc_get_clocks wrapper 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/impl/misc/wrapper_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/impl/misc/wrapper_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/Kernel64x64.tbgen.tcl 
+Execute       source C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/wrapper.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: C:/Users/zhenyu/Desktop/HLSstudy/FDTD/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 225.098 ; gain = 132.781
+INFO: [VHDL 208-304] Generating VHDL RTL for wrapper.
+INFO: [VLOG 209-307] Generating Verilog RTL for wrapper.
+Command     autosyn done; 10.275 sec.
+Command   csynth_design done; 27.77 sec.
+Command ap_source done; 29.752 sec.
+Execute cleanup_all 

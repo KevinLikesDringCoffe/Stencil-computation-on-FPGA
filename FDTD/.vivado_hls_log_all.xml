@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_buffer_0_1_l_10', FDTD/kernel64x64.cpp:84) on array 'array_buffer_0_1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_buffer_0_1'." projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:25.508+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_buffer_0_0_l_6', FDTD/kernel64x64.cpp:84) on array 'array_buffer_0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_buffer_0_0'." projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:25.211+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_buffer_1_0_l', FDTD/kernel64x64.cpp:50) on array 'array_buffer_1_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_buffer_1_0'." projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:25.164+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-466] Port 'bondary_e'() has different latency/depth on the same m_axi bundle:'gmem'" projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:23.812+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-466] Port 'bondary_w'() has different latency/depth on the same m_axi bundle:'gmem'" projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:22.653+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-466] Port 'bondary_s'() has different latency/depth on the same m_axi bundle:'gmem'" projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:22.640+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-466] Port 'bondary_n'() has different latency/depth on the same m_axi bundle:'gmem'" projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:22.626+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (FDTD/kernel64x64.cpp:27:14) in function 'Kernel64x64' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="FDTD" solutionName="solution1" date="2021-02-26T20:29:22.610+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
